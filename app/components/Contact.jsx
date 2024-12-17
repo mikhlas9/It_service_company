@@ -2,6 +2,7 @@
 import { Mail, Phone, MapPin } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import ShineBorder from './ui/shine-border'
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -50,6 +51,7 @@ export default function Contact() {
       <div className="container mx-auto px-6 relative">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
+
             <div className="bg-[#3B82F6] text-white p-8 md:w-1/3">
               <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
               <div className="space-y-4">
@@ -114,13 +116,13 @@ export default function Contact() {
                   className="bg-[#3B82F6] text-white px-6 py-3 rounded-lg hover:bg-[#2563EB] transition-colors"
                 >
                   {isSubmitting ? (
-                    <>Sending...</>
-                  ) : (
-                    <>Send Message</>
-                  )}
+                      <>Sending...</>
+                    ) : (
+                        <>Send Message</>
+                    )}
                 </button>
                 {submitStatus === 'success' && (
-                  <motion.p
+                    <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="text-green-500 text-center"
@@ -132,10 +134,10 @@ export default function Contact() {
 
                 {submitStatus === 'error' && (
                   <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-red-500 text-center"
-                    aria-live="polite"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-red-500 text-center"
+                  aria-live="polite"
                   >
                     There was an error sending your message. Please try again.
                   </motion.p>
@@ -145,6 +147,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
     </section>
   )
 }

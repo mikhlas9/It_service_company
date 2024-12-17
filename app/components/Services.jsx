@@ -1,4 +1,5 @@
 import { Code, Palette, Megaphone, Video } from 'lucide-react'
+import { BorderBeam } from './ui/border-beam'
 
 const services = [
   {
@@ -62,6 +63,7 @@ export default function Services() {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
+              <BorderBeam />
             </div>
           ))}
         </div>
