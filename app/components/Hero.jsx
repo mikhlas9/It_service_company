@@ -23,13 +23,24 @@ export default function Hero() {
               </p>
 
               {/* Service Highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 text-left">
-                <div className="flex items-center gap-4">
-                  <p className="text-gray-600 text-lg font-medium">
-                    Cutting-edge <span className="font-bold">Web Development</span> to establish your online presence.
-                  </p>
-                </div>
-                <div className="flex items-center gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8 text-left">
+  <div className="flex items-center gap-4">
+    <p className="text-gray-600 text-lg font-medium">
+      Cutting-edge <span className="font-bold">Web Development</span>
+    </p>
+  </div>
+  <div className="flex items-center gap-4">
+    <p className="text-gray-600 text-lg font-medium">
+      Powerful <span className="font-bold">Mobile Apps</span>
+    </p>
+  </div>
+  <div className="flex items-center gap-4">
+    <p className="text-gray-600 text-lg font-medium">
+      Eye-catching <span className="font-bold">UI/UX Design</span>
+    </p>
+  </div>
+</div>
+                {/* <div className="flex items-center gap-4">
                   <p className="text-gray-600 text-lg font-medium">
                     Powerful <span className="font-bold">Mobile Apps</span> tailored to your business needs.
                   </p>
@@ -38,11 +49,11 @@ export default function Hero() {
                   <p className="text-gray-600 text-lg font-medium">
                     Eye-catching <span className="font-bold">UI/UX Design</span> for seamless user experiences.
                   </p>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-20">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-16">
                 <button className="bg-[#3B82F6] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#2563EB] transition-colors"> 
                   <Link href="/contact" >
                   Get In Touch

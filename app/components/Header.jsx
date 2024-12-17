@@ -59,15 +59,15 @@ export default function Header() {
                 About
               </Link>
               <Link 
-                href="#contact" 
+                href="/contact" 
                 className="text-gray-700 hover:text-[#3B82F6] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
-              <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors w-full">
+              {/* <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors w-full">
                 Get Started
-              </button>
+              </button> */}
             </div>
           </div>
         )}
