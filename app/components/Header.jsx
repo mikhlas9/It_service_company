@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +31,7 @@ export default function Header() {
               Get Started
             </button> */}
           </div>
+         
 
           {/* Mobile Menu Button */}
           <button 
@@ -72,6 +74,12 @@ export default function Header() {
           </div>
         )}
       </nav>
+      <motion.div
+        className="h-0.5 bg-gradient-to-r from-white via-blue-400 to-white"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      />
     </header>
   )
 }
