@@ -2,43 +2,50 @@
 import { Code, Smartphone, Globe, Shield, FileSearch, Calculator } from 'lucide-react'
 import { BorderBeam } from './ui/border-beam'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const services = [
   {
     title: "Mobile App Development",
     description: "We create innovative, user-friendly mobile applications for iOS and Android platforms.",
     icon: Smartphone,
-    color: "#3B82F6"
+    color: "#3B82F6",
+    href: "/mobile-app-development"
   },
   {
     title: "Website Development",
     description: "We build responsive, high-performance websites tailored to your business needs.",
     icon: Globe,
-    color: "#FFB800"
+    color: "#FFB800",
+    href: "/website-development"
   },
   {
     title: "Website Penetration Testing",
     description: "We identify and help fix security vulnerabilities in your web applications.",
     icon: Shield,
-    color: "#FF4D4D"
+    color: "#FF4D4D",
+    href: "/website-pentesting"
   },
   {
     title: "App Penetration Testing",
     description: "We thoroughly test your mobile apps for security flaws and provide remediation advice.",
     icon: Code,
-    color: "#3B82F6"
+    color: "#3B82F6",
+    href: "/app-pentesting"
   },
   {
     title: "Security Consulting",
     description: "We offer expert advice on cybersecurity strategies and best practices for your organization.",
     icon: FileSearch,
-    color: "#10B981"
+    color: "#10B981",
+    href: "/security-consulting"
   },
   {
     title: "Tally + GST Evaluation",
     description: "We provide comprehensive evaluation and setup of Tally with GST compliance for your business.",
     icon: Calculator,
-    color: "#8B5CF6"
+    color: "#8B5CF6",
+    href: "/tally-gst"
   }
 ]
 
@@ -67,8 +74,11 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
-            >
+              >
+              <Link 
+                href={service.href}
+                className="block bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+              >
               <div
                 className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity"
                 style={{ background: `linear-gradient(to bottom right, ${service.color}, transparent)` }}
@@ -84,6 +94,7 @@ export default function Services() {
               </h3>
               <p className="text-gray-600">{service.description}</p>
               <BorderBeam />
+              </Link>
             </motion.div>
           ))}
         </div>
