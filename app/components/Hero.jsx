@@ -24,22 +24,23 @@ export default function Hero() {
 
                             {/* Service Highlights */}
                             <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8 text-left">
-                                <div className="flex items-center gap-4">
-                                    <p className="text-gray-600 text-lg font-medium">
-                                        Cutting-edge <span className="font-bold">Web Development</span>
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-4">
-                                    <p className="text-gray-600 text-lg font-medium">
-                                        Powerful <span className="font-bold">Mobile Apps</span>
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-4">
-                                    <p className="text-gray-600 text-lg font-medium">
-                                        Eye-catching <span className="font-bold">UI/UX Design</span>
-                                    </p>
-                                </div>
-                            </div>
+    <div className="flex items-center gap-4">
+        <p className="text-gray-600 text-lg font-medium">
+            Innovative <span className="font-bold">Mobile App Development</span>
+        </p>
+    </div>
+    <div className="flex items-center gap-4">
+        <p className="text-gray-600 text-lg font-medium">
+            Responsive <span className="font-bold">Website Development</span>
+        </p>
+    </div>
+    <div className="flex items-center gap-4">
+        <p className="text-gray-600 text-lg font-medium">
+            Comprehensive <span className="font-bold">Security Consulting</span>
+        </p>
+    </div>
+</div>
+
                             {/* <div className="flex items-center gap-4">
                   <p className="text-gray-600 text-lg font-medium">
                     Powerful <span className="font-bold">Mobile Apps</span> tailored to your business needs.
@@ -76,8 +77,8 @@ export default function Hero() {
                                 <Image
                                     src="/hero_img.png"
                                     alt="Creative Development"
-                                    width={400}
-                                    height={400}
+                                    width={500}
+                                    height={500}
                                     className="relative z-10"
                                 />
                             </div>
