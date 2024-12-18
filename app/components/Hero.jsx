@@ -23,23 +23,24 @@ export default function Hero() {
                             </p>
 
                             {/* Service Highlights */}
-                            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8 text-left">
-    <div className="flex items-center gap-4">
-        <p className="text-gray-600 text-lg font-medium">
-            Innovative <span className="font-bold">Mobile App Development</span>
-        </p>
-    </div>
-    <div className="flex items-center gap-4">
-        <p className="text-gray-600 text-lg font-medium">
-            Responsive <span className="font-bold">Website Development</span>
-        </p>
-    </div>
-    <div className="flex items-center gap-4">
-        <p className="text-gray-600 text-lg font-medium">
-            Comprehensive <span className="font-bold">Security Consulting</span>
-        </p>
-    </div>
-</div>
+                            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8 text-left sm:text-left text-center">
+                                <div className="flex items-center gap-4 justify-center sm:justify-start">
+                                    <p className="text-gray-600 text-lg font-medium">
+                                        Innovative <span className="font-bold">Mobile App Development</span>
+                                    </p>
+                                </div>
+                                <div className="flex items-center gap-4 justify-center sm:justify-start">
+                                    <p className="text-gray-600 text-lg font-medium">
+                                        Responsive <span className="font-bold">Website Development</span>
+                                    </p>
+                                </div>
+                                <div className="flex items-center gap-4 justify-center sm:justify-start">
+                                    <p className="text-gray-600 text-lg font-medium">
+                                        Comprehensive <span className="font-bold">Security Consulting</span>
+                                    </p>
+                                </div>
+                            </div>
+
 
                             {/* <div className="flex items-center gap-4">
                   <p className="text-gray-600 text-lg font-medium">
