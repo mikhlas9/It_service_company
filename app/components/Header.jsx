@@ -21,15 +21,17 @@ export default function Header() {
             <Link href="#services" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               Services
             </Link>
+            <Link href="/courses" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
+              Courses
+            </Link>
             <Link href="#about" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
+            <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors">
+            <Link href="/contact">
               Contact
             </Link>
-            {/* <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors">
-              Get Started
-            </button> */}
+            </button>
           </div>
          
 
@@ -53,6 +55,14 @@ export default function Header() {
               >
                 Services
               </Link>
+            
+              <Link 
+                href="/courses" 
+                className="text-gray-700 hover:text-[#3B82F6] transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Courses
+              </Link>
               <Link 
                 href="#about" 
                 className="text-gray-700 hover:text-[#3B82F6] transition-colors"
@@ -60,16 +70,14 @@ export default function Header() {
               >
                 About
               </Link>
+              <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors w-full">
               <Link 
                 href="/contact" 
-                className="text-gray-700 hover:text-[#3B82F6] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
-              {/* <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors w-full">
-                Get Started
-              </button> */}
+              </button>
             </div>
           </div>
         )}

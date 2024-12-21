@@ -57,7 +57,7 @@ export default function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5" />
-                  <span>+91 9682667804</span>
+                  <span>+91 9906610175</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5" />
@@ -65,7 +65,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5" />
-                  <span>Lal Bazar, Srinagar, J&K 190023</span>
+                  <span>Srinagar, J&K 190001</span>
                 </div>
               </div>
             </div>

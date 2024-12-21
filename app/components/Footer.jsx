@@ -32,16 +32,19 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-[#3B82F6] transition-colors">Web Development</a>
+                <a href="#services" className="hover:text-[#3B82F6] transition-colors">Web Development</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#3B82F6] transition-colors">App Development</a>
+                <a href="#services" className="hover:text-[#3B82F6] transition-colors">App Development</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#3B82F6] transition-colors">Digital Marketing</a>
+                <a href="#services" className="hover:text-[#3B82F6] transition-colors">Penetration Testing</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#3B82F6] transition-colors">UI/UX Design</a>
+                <a href="#services" className="hover:text-[#3B82F6] transition-colors">Security Consulting</a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-[#3B82F6] transition-colors">Tally + GST Evaluation</a>
               </li>
             </ul>
           </div>

@@ -40,7 +40,7 @@ export default function ContactPage() {
                                 <iframe
                                     title="Location Map"
                                     className="w-full h-80 rounded-lg shadow-md"
-                                    src={`https://www.openstreetmap.org/export/embed.html?bbox=74.91537859344482%2C34.01812661166744%2C74.92183518314362%2C34.023137442339015&layer=mapnik&marker=34.020777%2C74.918182`}
+                                    src={`https://www.openstreetmap.org/export/embed.html?bbox=74.825526%2C34.076152%2C74.833526%2C34.084152&layer=mapnik&marker=34.080152%2C74.829526`}
                                     width="100%"
                                     height="500"
                                     style={{ border: 0 }}
