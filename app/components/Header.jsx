@@ -18,13 +18,13 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#services" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
+            <Link href="/services" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               Services
             </Link>
             <Link href="/courses" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               Courses
             </Link>
-            <Link href="#about" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               About
             </Link>
             <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors">

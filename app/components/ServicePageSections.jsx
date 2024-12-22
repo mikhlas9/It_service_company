@@ -7,7 +7,7 @@ import { CheckCircle } from 'lucide-react'
 const benefits = [
   {
     title: "Experienced Team",
-    description: "Our professionals have extensive experience in web development."
+    description: "Our professionals have extensive experience in Development."
   },
   {
     title: "Client-Centric Approach",

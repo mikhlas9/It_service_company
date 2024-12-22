@@ -10,42 +10,42 @@ const services = [
     description: "We create innovative, user-friendly mobile applications for iOS and Android platforms.",
     icon: Smartphone,
     color: "#3B82F6",
-    href: "/mobile-app-development"
+    href: "/services/mobile-app-development"
   },
   {
     title: "Website Development",
     description: "We build responsive, high-performance websites tailored to your business needs.",
     icon: Globe,
     color: "#FFB800",
-    href: "/website-development"
+    href: "/services/website-development"
   },
   {
     title: "Website Penetration Testing",
     description: "We identify and help fix security vulnerabilities in your web applications.",
     icon: Shield,
     color: "#FF4D4D",
-    href: "/website-pentesting"
+    href: "/services/website-pentesting"
   },
   {
     title: "App Penetration Testing",
     description: "We thoroughly test your mobile apps for security flaws and provide remediation advice.",
     icon: Code,
     color: "#3B82F6",
-    href: "/app-pentesting"
+    href: "/services/app-pentesting"
   },
   {
     title: "Security Consulting",
     description: "We offer expert advice on cybersecurity strategies and best practices for your organization.",
     icon: FileSearch,
     color: "#10B981",
-    href: "/security-consulting"
+    href: "/services/security-consulting"
   },
   {
     title: "Tally + GST Evaluation",
     description: "We provide comprehensive evaluation and setup of Tally with GST compliance for your business.",
     icon: Calculator,
     color: "#8B5CF6",
-    href: "/tally-gst"
+    href: "/services/tally-gst"
   }
 ]
 

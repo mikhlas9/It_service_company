@@ -9,21 +9,17 @@ export default function ContactPage() {
 
             {/* Background Blur Elements */}
             <div className="relative overflow-hidden">
-                <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
+                {/* <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" /> */}
               
                 {/* Main Content */}
-                <main className="pt-20 relative z-10">
+                <main className="pt-20 relative z-10 bg-gradient-to-b from-blue-50 to-white">
                     <div className="container mx-auto px-6 mt-5">
                         <div className="text-center">
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                                 Contact
                             </h2>
                             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                                We're excited to explore potential collaborations and projects with you
-                                across a spectrum of creative endeavors, including web and app
-                                development, graphics design, and digital marketing. Let's connect to
-                                transform your ideas into impactful solutions that resonate with your
-                                audience.
+                            Have questions, ideas, or projects you'd like to discuss? We're here to help! Whether you’re looking to transform your vision into reality or need expert advice, feel free to reach out. Let’s connect and create something incredible together.
                             </p>
                         </div>
                     </div>
