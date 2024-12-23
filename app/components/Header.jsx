@@ -24,6 +24,9 @@ export default function Header() {
             <Link href="/courses" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               Courses
             </Link>
+            <Link href="/internships" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
+              Internships
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-[#3B82F6] transition-colors">
               About
             </Link>
@@ -62,6 +65,13 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
               >
                 Courses
+              </Link>
+              <Link 
+                href="/internships" 
+                className="text-gray-700 hover:text-[#3B82F6] transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Internships
               </Link>
               <Link 
                 href="#about" 
