@@ -1,8 +1,23 @@
+'use client'
+import { useEffect } from 'react';
+
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function ContactPage() {
+    // useEffect(() => {
+    //     const script = document.createElement('script');
+    //     script.src = "//code.tidio.co/kpwhsbpiahcb2b3ikvk19e8lck2mtlit.js";
+    //     script.async = true;
+    //     document.body.appendChild(script);
+    
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     };
+    // }, []);
+    
+
     return (
         <>
             <Header />
@@ -10,7 +25,7 @@ export default function ContactPage() {
             {/* Background Blur Elements */}
             <div className="relative overflow-hidden">
                 {/* <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" /> */}
-              
+
                 {/* Main Content */}
                 <main className="pt-20 relative z-10 bg-gradient-to-b from-blue-50 to-white">
                     <div className="container mx-auto px-6 mt-5">
@@ -19,7 +34,7 @@ export default function ContactPage() {
                                 Contact
                             </h2>
                             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Have questions, ideas, or projects you'd like to discuss? We're here to help! Whether you’re looking to transform your vision into reality or need expert advice, feel free to reach out. Let’s connect and create something incredible together.
+                                Have questions, ideas, or projects you'd like to discuss? We're here to help! Whether you’re looking to transform your vision into reality or need expert advice, feel free to reach out. Let’s connect and create something incredible together.
                             </p>
                         </div>
                     </div>

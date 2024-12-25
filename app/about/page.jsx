@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
 
 const features = [
   "Modern Development Practices",
@@ -11,6 +13,7 @@ const features = [
   "Agile Methodology",
   "Cutting-edge Technologies"
 ]
+
 
 export default function About() {
   return (

@@ -8,9 +8,11 @@ export const metadata = {
   description: 'Transform your digital presence with our playful and professional IT services',
 }
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body className={`${outfit.className} bg-[#F8FAFC]`}>{children}</body>
     </html>
   )
