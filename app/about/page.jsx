@@ -67,7 +67,7 @@ export default function About() {
           </div>
         </div>
       </section>
-
+{/* 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Team</h2>
@@ -89,7 +89,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-[#3B82F6] text-white">
         <div className="container mx-auto px-6 text-center">

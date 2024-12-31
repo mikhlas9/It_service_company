@@ -51,16 +51,16 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-[#3B82F6] transition-colors">
+              {/* <a href="#" className="hover:text-[#3B82F6] transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
               <a href="#" className="hover:text-[#3B82F6] transition-colors">
                 <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="hover:text-[#3B82F6] transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/binarybastions/" className="hover:text-[#3B82F6] transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#3B82F6] transition-colors">
+              <a href="https://www.linkedin.com/company/binarybastions/" className="hover:text-[#3B82F6] transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
             </div>

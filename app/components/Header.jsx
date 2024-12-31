@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,8 +14,17 @@ export default function Header() {
     <header className="fixed w-full bg-white/80 backdrop-blur-md z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-[#3B82F6]">
-            Binary Bastions
+        <Link href="/" className="flex items-center">
+            {/* Logo for all screens */}
+            <Image
+              src="/logo.png" // Update this path to match your file location in the `public` folder
+              alt="Binary Bastions Logo"
+              width={40} // Adjust width as needed
+              height={40} // Adjust height as needed
+              className="mr-2"
+            />
+            {/* Text for larger screens only */}
+            <span className="hidden md:block text-2xl font-bold text-[#3B82F6]">Binary Bastions</span>
           </Link>
 
           {/* Desktop Navigation */}
