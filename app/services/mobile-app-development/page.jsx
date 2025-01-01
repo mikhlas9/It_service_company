@@ -61,7 +61,7 @@ export default function MobileAppDevelopment() {
         </div>
       </section>
       
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <GetInTouch />
       <Footer />
     </main>

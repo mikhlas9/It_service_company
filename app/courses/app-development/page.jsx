@@ -81,7 +81,7 @@ export default function AppDevelopmentCourse() {
 
             <div className="mt-12 text-center">
               <a 
-                href="#" 
+                href="/courses/enroll" 
                 className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors"
               >
                 Enroll Now

@@ -60,7 +60,7 @@ export default function TallyGST() {
         </div>
       </section>
       
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <GetInTouch />
       <Footer />
     </main>

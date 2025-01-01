@@ -78,14 +78,20 @@ export default function AppDevelopmentInternship() {
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Sample Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Tailored Project Experience</h2>
+          <div className="max-w-3xl mx-auto text-lg text-gray-600 space-y-6">
+            <p>
+              At Binary Bastions, we believe in providing a personalized learning experience. Instead of predetermined projects, we tailor your internship projects based on:
+            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Your current skill level and prior experience</li>
+              <li>Your specific areas of interest within app development</li>
+              <li>The latest trends and technologies in the mobile app industry</li>
+              <li>Real-world business needs and client projects</li>
+            </ul>
+            <p>
+              This approach ensures that you'll work on projects that are challenging yet achievable, helping you grow your skills effectively. Whether you're a beginner looking to build your first app or an experienced developer aiming to tackle complex challenges, we'll provide projects that match your abilities and help you reach the next level in your app development journey.
+            </p>
           </div>
         </div>
       </section>
@@ -120,7 +126,7 @@ export default function AppDevelopmentInternship() {
             Apply now for our App Development Internship and start your journey towards becoming a skilled mobile developer!
           </p>
           <Link 
-            href="/apply"
+            href="/internships/apply"
             className="inline-block bg-white text-[#10B981] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
           >
             Apply Now

@@ -61,7 +61,7 @@ export default function WebsiteDevelopment() {
         </div>
       </section>
       
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <GetInTouch />
       <Footer />
     </main>

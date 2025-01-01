@@ -82,7 +82,7 @@ export default function AppPenetrationTestingCourse() {
 
             <div className="mt-12 text-center">
               <a 
-                href="#" 
+                href="/courses/enroll" 
                 className="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Enroll Now

@@ -12,15 +12,15 @@ export default function Header() {
 
   return (
     <header className="fixed w-full bg-white/80 backdrop-blur-md z-50">
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-6 pt-3 pb-1">
         <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center">
             {/* Logo for all screens */}
             <Image
-              src="/logo.png" // Update this path to match your file location in the `public` folder
+              src="/logo2.png" // Update this path to match your file location in the `public` folder
               alt="Binary Bastions Logo"
-              width={40} // Adjust width as needed
-              height={40} // Adjust height as needed
+              width={60} // Adjust width as needed
+              height={60} // Adjust height as needed
               className="mr-2"
             />
             {/* Text for larger screens only */}
