@@ -6,6 +6,9 @@ const outfit = Outfit({ subsets: ['latin'] })
 export const metadata = {
   title: 'Binary Bastions - Your Stronghold for Digital Solutions',
   description: 'Transform your digital presence with our playful and professional IT services',
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 
