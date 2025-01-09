@@ -77,7 +77,7 @@ export default function Services() {
               >
               <Link 
                 href={service.href}
-                className="block bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+                className="block  rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden backdrop-filter backdrop-blur-sm bg-white/10 hover:bg-white/20"
               >
               <div
                 className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity"
@@ -89,10 +89,10 @@ export default function Services() {
               >
                 <service.icon className="w-6 h-6" style={{ color: service.color }} />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#3B82F6] transition-colors">
+              <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#3B82F6] transition-colors">
                 {service.title}
               </h3>
-              <p className="text-gray-600">{service.description}</p>
+              <p className="text-gray-100">{service.description}</p>
               <BorderBeam />
               </Link>
             </motion.div>

@@ -86,7 +86,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              className=" rounded-2xl shadow-lg overflow-hidden"
             >
               {/* Browser-like header */}
               <div className="bg-[#3B82F6] h-8 flex items-center px-4">
@@ -98,14 +98,14 @@ export default function Testimonials() {
               </div>
               
               {/* Content */}
-              <div className="p-6">
-                <p className="text-gray-700 mb-6 min-h-[200px]">
+              <div className="p-6 backdrop-filter backdrop-blur-sm bg-white/5 hover:bg-white/20">
+                <p className="text-gray-100 mb-6 min-h-[200px]">
                   "{testimonial.text}"
                 </p>
                 <div className="flex items-end justify-between">
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-gray-500">{testimonial.company}</p>
+                    <p className="font-semibold text-gray-100">{testimonial.author}</p>
+                    <p className="text-gray-300">{testimonial.company}</p>
                   </div>
                   {testimonial.decoration}
                 </div>
