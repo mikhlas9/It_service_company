@@ -50,12 +50,12 @@ export default function AppDevelopmentInternship() {
 
         <section className="pt-10 pb-20">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-1 relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/app-dev.png"
                   alt="App Development Internship"
-                  width={400}
+                  width={650}
                   height={400}
                   className="rounded-xl shadow-lg"
                 />
