@@ -60,13 +60,13 @@ export default function CybersecurityInternship() {
 
         <section className="pt-10 pb-20">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-1 relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/cyber.png"
                   alt="Cybersecurity Internship"
-                  width={400}
-                  height={400}
+                  width={650}
+                  height={650}
                   className="rounded-xl shadow-lg"
                 />
               </div>

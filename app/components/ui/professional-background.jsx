@@ -119,7 +119,7 @@ const ProfessionalBackground = () => {
         ref={canvasRef}
         className="fixed inset-0 w-full h-full -z-10"
       />
-      <div className="fixed inset-0 bg-gradient-to-b from-transparent to-black/50 pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
     </>
   )
 }
