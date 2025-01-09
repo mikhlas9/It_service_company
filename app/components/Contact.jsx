@@ -45,8 +45,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-[#FFB800]/10 rounded-full blur-3xl" />
+      {/* <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
+      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-[#FFB800]/10 rounded-full blur-3xl" /> */}
 
       <div className="container mx-auto px-6 relative">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">

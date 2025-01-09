@@ -71,15 +71,15 @@ export function GetInTouch() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="text-4xl font-bold mb-6 text-white">Get in Touch</h2>
+          <p className="text-xl text-gray-100 mb-8">
             Ready to elevate your online presence? Contact us today to discuss
             your project requirements and learn how we can help your business grow.
           </p>
           <Link 
             href="/contact"
-            className="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-[#3B82F6] transition-colors"
-          >
+            className="inline-block bg-[#3B82F6] text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-colors"
+            >
             Get In Touch
           </Link>
         </motion.div>

@@ -53,15 +53,15 @@ export default function Services() {
   return (
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FFB800]/10 rounded-full blur-3xl" />
+      {/* <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FFB800]/10 rounded-full blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
-      
+       */}
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Specialized Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             We offer a range of cutting-edge digital services to enhance your business's growth, security, and success in the modern world.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function Services() {
               >
               <Link 
                 href={service.href}
-                className="block bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+                className="block  rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden backdrop-filter backdrop-blur-sm bg-white/10 hover:bg-white/20"
               >
               <div
                 className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity"
@@ -89,10 +89,10 @@ export default function Services() {
               >
                 <service.icon className="w-6 h-6" style={{ color: service.color }} />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#3B82F6] transition-colors">
+              <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#3B82F6] transition-colors">
                 {service.title}
               </h3>
-              <p className="text-gray-600">{service.description}</p>
+              <p className="text-gray-100">{service.description}</p>
               <BorderBeam />
               </Link>
             </motion.div>
