@@ -8,34 +8,34 @@ export default function Hero() {
             <div className="container mx-auto px-6">
                 <div className="relative">
                     {/* Decorative blobs */}
-                    <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#3B82F6]/10 rounded-full blur-3xl" />
-                    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#FFB800]/10 rounded-full blur-3xl" />
+                    {/* <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#3B82F6]/10 rounded-full blur-3xl" />
+                    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#FFB800]/10 rounded-full blur-3xl" /> */}
 
                     <div className="relative flex flex-col lg:flex-row items-center gap-12">
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
-                            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                                 Bring Your Ideas to
                                 <span className="text-[#3B82F6]"> Life</span>
                             </h1>
-                            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
                                 We transform your digital dreams into reality with our creative and professional IT solutions. Let's build something amazing together!
                             </p>
 
                             {/* Service Highlights */}
                             <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8 text-left sm:text-left text-center">
                                 <div className="flex items-center gap-4 justify-center sm:justify-start">
-                                    <p className="text-gray-600 text-lg font-medium">
+                                    <p className="text-gray-300 text-lg font-medium">
                                         Innovative <span className="font-bold">Mobile App Development</span>
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-4 justify-center sm:justify-start">
-                                    <p className="text-gray-600 text-lg font-medium">
+                                    <p className="text-gray-300 text-lg font-medium">
                                         Responsive <span className="font-bold">Website Development</span>
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-4 justify-center sm:justify-start">
-                                    <p className="text-gray-600 text-lg font-medium">
+                                    <p className="text-gray-300 text-lg font-medium">
                                         Comprehensive <span className="font-bold">Security Consulting</span>
                                     </p>
                                 </div>
@@ -84,8 +84,8 @@ export default function Hero() {
                                 />
                             </div>
                             {/* Decorative elements */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#3B82F6]/10 blob" />
-                        </div>
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#3B82F6]/10 rounded-full blur-2xl" />
+                            </div>
                     </div>
                 </div>
             </div>
