@@ -12,23 +12,24 @@ export default function About() {
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Add a semi-transparent overlay to improve readability */}
-      <div className="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+      <div className="absolute inset-0 "></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="flex-1 relative">
-            <div className="animate-float">
-              <Image
-                // src="/about-illustration.svg"
-                alt="About Us Illustration"
-                width={400}
-                height={400}
-                className="relative z-10"
-              />
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#3B82F6]/10 rounded-full blur-2xl" />
-          </div>
+        <div className="flex-1 relative flex justify-center items-center">
+  <div className="animate-float">
+    <Image
+      src="/about1.png"
+      alt="About Us Illustration"
+      width={400}
+      height={400}
+      className="relative z-10"
+    />
+  </div>
+  {/* Decorative elements */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#3B82F6]/10 rounded-full blur-2xl" />
+</div>
+
           
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

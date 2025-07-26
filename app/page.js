@@ -8,32 +8,40 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
-import ProfessionalBackground from './components/ui/professional-background'
 
 export default function Home() {
   useEffect(() => {
     // This ensures the background takes up the full height of the page
     document.body.style.minHeight = '100vh'
+    // Optimize scrolling performance
+    document.documentElement.style.scrollBehavior = 'smooth'
+    
+    // Add scroll optimization
+    document.body.style.overflowX = 'hidden'
+    
     return () => {
       document.body.style.minHeight = ''
+      document.documentElement.style.scrollBehavior = ''
+      document.body.style.overflowX = ''
     }
   }, [])
 
   return (
-    <>
-      <ProfessionalBackground />
-      <div className="relative z-10">
-        <Header />
-        <main>
-          <Hero />
-          <Services />
-          <About />
-          <Testimonials />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </>
+    <div 
+      className="relative z-10 will-change-scroll"
+      style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+      }}
+    >
+      <Header />
+      <main>
+        <Hero />
+        <Services />
+        <About />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   )
 }
-

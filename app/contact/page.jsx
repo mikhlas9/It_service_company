@@ -28,11 +28,13 @@ export default function ContactPage() {
 
     return (
         <>
-            <ProfessionalBackground />
+            {/* <ProfessionalBackground /> */}
             <Header />
 
             {/* Background Blur Elements */}
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden" style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+      }}>
                 {/* <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" /> */}
 
                 {/* Main Content */}

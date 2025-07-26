@@ -94,3 +94,27 @@
 }
 
 
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+/* In your globals.css */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Optimize animations for scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  .will-change-scroll {
+    will-change: scroll-position;
+  }
+}
