@@ -45,8 +45,10 @@ export default function InternshipProjects() {
     }, [])
     return (
         <>
-            <ProfessionalBackground />
-            <main>
+            {/* <ProfessionalBackground /> */}
+            <main style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+      }}>
 
                 <Header />
                 <section className="pt-32 pb-5 ">

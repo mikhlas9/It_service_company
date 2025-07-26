@@ -79,8 +79,10 @@ export default function Courses() {
 
   return (
     <>
-      <ProfessionalBackground />
-      <main>
+      {/* <ProfessionalBackground /> */}
+      <main style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+      }}>
         <Header />
         <section className="pt-32 pb-20 relative overflow-hidden">
           {/* Decorative elements */}

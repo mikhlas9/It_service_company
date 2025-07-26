@@ -84,8 +84,8 @@ export default function CybersecurityCourse() {
               <div className="mt-12 text-center">
                 <a 
                   href="/courses/enroll" 
-                  className="inline-block bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition-colors"
-                >
+                  className="inline-block bg-[#3B82F6] text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-colors"
+s                  >
                   Enroll Now
                 </a>
               </div>

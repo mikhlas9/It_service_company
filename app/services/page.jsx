@@ -22,8 +22,10 @@ export default function ServicesPage() {
 
     return (
         <>
-            <ProfessionalBackground />
-            <main>
+            {/* <ProfessionalBackground /> */}
+            <main style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+      }}>
                 <Header />
 
                 <div className='py-16'>
