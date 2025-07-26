@@ -14,11 +14,11 @@ export default function Hero() {
                 />
             </div>
             
-            <div className="container mx-auto px-6 relative z-10 pt-14 sm:pt-30 sm:pb-3">
+            <div className="container mx-auto px-6 relative z-10 pt-14 sm:pt-30 sm:pb-3 pb-10">
                 <div className="relative">
                     {/* Centered Content */}
                     <div className="text-center max-w-4xl mx-auto">
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
+                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
                             Bring Your Ideas to
                             <span className="text-[#3B82F6]"> Life</span>
                         </h1>
