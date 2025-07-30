@@ -28,7 +28,7 @@ export default function ServicesPage() {
       }}>
                 <Header />
 
-                <div className='py-16'>
+                <div className='py-2'>
                     <Services />
                 </div>
 
@@ -36,20 +36,24 @@ export default function ServicesPage() {
                     <div className="container mx-auto px-6">
                         <h2 className="text-3xl font-bold text-center text-white mb-12">Why Choose Our Services?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {[
-                                { title: "Expertise", description: "Our team consists of highly skilled professionals with years of experience in their respective fields." },
-                                { title: "Customization", description: "We tailor our services to meet your specific business needs and goals." },
-                                { title: "Innovation", description: "We stay up-to-date with the latest technologies and methodologies to deliver cutting-edge solutions." },
-                                { title: "Quality Assurance", description: "We follow rigorous quality control processes to ensure the highest standards in all our deliverables." },
-                                { title: "Timely Delivery", description: "We understand the importance of deadlines and strive to deliver projects on time, every time." },
-                                { title: "Ongoing Support", description: "Our commitment doesn't end with project delivery. We provide continuous support and maintenance." }
-                            ].map((item, index) => (
-<div key={index} className="backdrop-filter backdrop-blur-sm bg-white/10 hover:bg-white/20 rounded-lg shadow-md p-6 border border-white">
-<h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
-                                    <p className="text-gray-200">{item.description}</p>
-                                </div>
-                            ))}
-                        </div>
+  {[
+    { title: "Expertise", description: "Our team consists of highly skilled professionals with years of experience in their respective fields." },
+    { title: "Customization", description: "We tailor our services to meet your specific business needs and goals." },
+    { title: "Innovation", description: "We stay up-to-date with the latest technologies and methodologies to deliver cutting-edge solutions." },
+    { title: "Quality Assurance", description: "We follow rigorous quality control processes to ensure the highest standards in all our deliverables." },
+    { title: "Timely Delivery", description: "We understand the importance of deadlines and strive to deliver projects on time, every time." },
+    { title: "Ongoing Support", description: "Our commitment doesn't end with project delivery. We provide continuous support and maintenance." }
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="relative rounded-lg p-6 bg-white/10 backdrop-filter backdrop-blur-md border border-white/20 shadow-md hover:shadow-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:z-10 cursor-default"
+    >
+      <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+      <p className="text-gray-200 leading-relaxed">{item.description}</p>
+    </div>
+  ))}
+</div>
+
                     </div>
                 </section>
 

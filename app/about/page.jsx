@@ -34,7 +34,7 @@ export default function About() {
         background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
       }}>
         <Header />
-        <section className="pt-32 pb-20 ">
+        <section className="pt-20 pb-20 ">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">

@@ -1,7 +1,7 @@
 'use client'
+import { useRef, useEffect, useState } from 'react'
 import { Code, Smartphone, Globe, Shield, FileSearch, Calculator } from 'lucide-react'
 import { BorderBeam } from './ui/border-beam'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const services = [
@@ -49,36 +49,43 @@ const services = [
   }
 ]
 
-const containerVariants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-}
+// Lightweight scroll animation hook
+function useScrollAnimation(delay = 0) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
 
-const cardVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 60,
-    scale: 0.9
-  },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    scale: 1,
-    transition: { 
-      duration: 0.6, 
-      ease: "easeOut" 
-    }
-  }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setTimeout(() => setIsVisible(true), delay)
+        }
+      },
+      { threshold: 0.1, rootMargin: '20px' }
+    )
+    
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [delay, isVisible])
+
+  return [ref, isVisible]
 }
 
 export default function Services() {
+  const [headerRef, headerVisible] = useScrollAnimation()
+
   return (
-    <section id="services" className="sm:py-20 relative overflow-hidden">
+    <section id="services" className="sm:py-20 relative">
       <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-16">
+        {/* Header Animation */}
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-700 ease-out ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Specialized Services
           </h2>
@@ -87,89 +94,60 @@ export default function Services() {
           </p>
         </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              whileHover={{ 
-                scale: 1.05,
-                rotateY: 5,
-                rotateX: 5,
-                transition: { 
-                  duration: 0.3, 
-                  ease: "easeOut" 
-                }
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="perspective-1000"
-            >
-              <Link 
-                href={service.href}
-className="block rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden bg-gray-900/80 hover:bg-gray-800/90 backdrop-filter backdrop-blur-md border-2 border-white/25 hover:border-white/50"
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, idx) => {
+            const [ref, visible] = useScrollAnimation(idx * 100)
+            
+            return (
+              <div
+                key={idx}
+                ref={ref}
+                className={`transition-all duration-500 ease-out ${
+                  visible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-6'
+                }`}
               >
-                {/* Enhanced gradient overlay */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-15 transition-all duration-500"
-                  style={{ background: `linear-gradient(135deg, ${service.color}20, transparent 70%)` }}
-                />
-                
-                {/* Animated background pulse */}
-                <motion.div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100"
-                  style={{ 
-                    background: `radial-gradient(circle at center, ${service.color}10, transparent 70%)` 
-                  }}
-                  animate={{
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
+                <Link href={service.href} className="block group">
+                  <div className="rounded-2xl p-6 bg-gray-900/80 border border-white/30 transition-all duration-300 ease-out group-hover:bg-gray-800/90 group-hover:border-white/20 group-hover:-translate-y-1 group-hover:shadow-lg group-hover:shadow-black/20">
+                    
+                    {/* Simple hover gradient */}
+                    <div
+                      className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                      style={{ 
+                        background: `linear-gradient(135deg, ${service.color}, transparent 70%)`
+                      }}
+                    />
+                    
+                    {/* Icon */}
+                    <div
+                      className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105"
+                      style={{ backgroundColor: `${service.color}15` }}
+                    >
+                      <service.icon 
+                        className="w-7 h-7" 
+                        style={{ color: service.color }} 
+                      />
+                    </div>
 
-                {/* Icon container with enhanced animation */}
-                <motion.div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 relative z-10"
-                  style={{ backgroundColor: `${service.color}20` }}
-                  whileHover={{ 
-                    scale: 1.2,
-                    rotateZ: 10,
-                    transition: { duration: 0.3 }
-                  }}
-                >
-                  <service.icon className="w-7 h-7" style={{ color: service.color }} />
-                </motion.div>
+                    {/* Content */}
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-blue-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed transition-colors duration-300 group-hover:text-gray-200">
+                        {service.description}
+                      </p>
+                    </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <motion.h3 
-                    className="text-xl font-semibold mb-3 text-white group-hover:text-[#3B82F6] transition-colors duration-300"
-                    whileHover={{ x: 5 }}
-                  >
-                    {service.title}
-                  </motion.h3>
-                  <motion.p 
-                    className="text-gray-200 leading-relaxed"
-                    whileHover={{ x: 3 }}
-                  >
-                    {service.description}
-                  </motion.p>
-                </div>
-
-                <BorderBeam />
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+                    <BorderBeam />
+                  </div>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )
