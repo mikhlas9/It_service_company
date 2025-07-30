@@ -118,3 +118,10 @@ body {
     will-change: scroll-position;
   }
 }
+
+/* Make the last word blue and text centered */
+.blur-text span:last-child {
+  color: #3B82F6;
+}
+
+
