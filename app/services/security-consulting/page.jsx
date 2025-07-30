@@ -15,10 +15,14 @@ export default function SecurityConsulting() {
 
   return (
     <>
-      <ProfessionalBackground />
-      <main>
-        <Header />
-        <section className="pt-32 pb-20">
+       {/* <ProfessionalBackground /> */}
+            <main 
+              style={{
+              background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+            }}
+            >
+              <Header />
+              <section className="pt-20 pb-20">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[#cdd1d8] text-transparent bg-clip-text">

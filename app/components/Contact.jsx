@@ -43,18 +43,18 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-20 relative overflow-hidden">
       {/* Decorative elements */}
       {/* <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-[#FFB800]/10 rounded-full blur-3xl" /> */}
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-4 md:px-6 relative">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
 
-            <div className="bg-[#3B82F6] text-white p-8 md:w-1/3">
-              <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
-              <div className="space-y-4">
+            <div className="bg-[#3B82F6] text-white p-6 md:p-8 md:w-1/3">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Contact Info</h3>
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5" />
                   <span>+91 9906610175</span>
@@ -70,8 +70,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-8 md:w-2/3">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+            <div className="p-6 md:p-8 md:w-2/3">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">Send us a message</h3>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input

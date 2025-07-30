@@ -69,9 +69,9 @@ export default function Header() {
 
   const menuItems = [
     { href: '/services', label: 'Services' },
-    { href: '/courses', label: 'Courses' },
-    { href: '/internships', label: 'Internships' },
-    { href: '/about', label: 'About' }
+    // { href: '/courses', label: 'Courses' },
+    // { href: '/internships', label: 'Internships' },
+    { href: '/about', label: 'About Us' }
   ]
 
   return (
@@ -109,14 +109,14 @@ export default function Header() {
               <Link href="/services" className="text-white hover:text-[#3B82F6] transition-colors">
                 Services
               </Link>
-              <Link href="/courses" className="text-white hover:text-[#3B82F6] transition-colors">
+              {/* <Link href="/courses" className="text-white hover:text-[#3B82F6] transition-colors">
                 Courses
               </Link>
               <Link href="/internships" className="text-white hover:text-[#3B82F6] transition-colors">
                 Internships
-              </Link>
+              </Link> */}
               <Link href="/about" className="text-white hover:text-[#3B82F6] transition-colors">
-                About
+                About Us
               </Link>
 
               <button className="bg-[#3B82F6] text-white px-6 py-2 rounded-full hover:bg-[#2563EB] transition-colors">

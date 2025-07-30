@@ -29,20 +29,20 @@ export default function ContactPage() {
     return (
         <>
             {/* <ProfessionalBackground /> */}
-            <Header />
 
             {/* Background Blur Elements */}
             <div className="relative overflow-hidden" style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
-      }}>
+                background: 'linear-gradient(135deg, #0f172a 0%, #000000 100%)'
+            }}>
+          <Header />
                 {/* <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" /> */}
 
                 {/* Main Content */}
-                <main className="pt-20 relative z-10 ">
+                <main className="pt-10 relative z-10 ">
                     <div className="container mx-auto px-6 mt-5">
                         <div className="text-center">
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                                Contact
+                                Contact Us
                             </h2>
                             <p className="text-xl text-gray-100 max-w-2xl mx-auto">
                                 Have questions, ideas, or projects you'd like to discuss? We're here to help! Whether you’re looking to transform your vision into reality or need expert advice, feel free to reach out. Let’s connect and create something incredible together.
