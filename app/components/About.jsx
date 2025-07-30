@@ -36,7 +36,7 @@ export default function About() {
               We Build Amazing
               <span className="text-[#3B82F6]"> Digital Solutions</span>
             </h2>
-            <p className="text-gray-200 mb-8">
+            <p className="text-gray-200 mb-8 sm:mr-28">
               Our team of experts combines creativity with technical expertise to deliver outstanding results. We're passionate about helping businesses grow through innovative digital solutions.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

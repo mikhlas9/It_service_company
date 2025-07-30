@@ -21,18 +21,18 @@ const services = [
   },
   {
     title: "Website Penetration Testing",
-    description: "We identify and help fix security vulnerabilities in your web applications.",
+    description: "We identify and help fix security vulnerabilities in your web applications and provide detailed reports.",
     icon: Shield,
     color: "#FF4D4D",
     href: "/services/website-pentesting"
   },
-  {
-    title: "App Penetration Testing",
-    description: "We thoroughly test your mobile apps for security flaws and provide remediation advice.",
-    icon: Code,
-    color: "#3B82F6",
-    href: "/services/app-pentesting"
-  },
+  // {
+  //   title: "App Penetration Testing",
+  //   description: "We thoroughly test your mobile apps for security flaws and provide remediation advice.",
+  //   icon: Code,
+  //   color: "#3B82F6",
+  //   href: "/services/app-pentesting"
+  // },
   {
     title: "Security Consulting",
     description: "We offer expert advice on cybersecurity strategies and best practices for your organization.",
@@ -40,13 +40,13 @@ const services = [
     color: "#10B981",
     href: "/services/security-consulting"
   },
-  {
-    title: "Tally + GST Evaluation",
-    description: "We provide comprehensive evaluation and setup of Tally with GST compliance for your business.",
-    icon: Calculator,
-    color: "#8B5CF6",
-    href: "/services/tally-gst"
-  }
+  // {
+  //   title: "Tally + GST Evaluation",
+  //   description: "We provide comprehensive evaluation and setup of Tally with GST compliance for your business.",
+  //   icon: Calculator,
+  //   color: "#8B5CF6",
+  //   href: "/services/tally-gst"
+  // }
 ]
 
 // Lightweight scroll animation hook
@@ -86,8 +86,8 @@ export default function Services() {
               : 'opacity-0 translate-y-4'
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Specialized Services
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Our Specialized<span className="text-[#3B82F6]"> Services</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             We offer a range of cutting-edge digital services to enhance your business's growth, security, and success in the modern world.
@@ -95,7 +95,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:mx-32">
           {services.map((service, idx) => {
             const [ref, visible] = useScrollAnimation(idx * 100)
             
