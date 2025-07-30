@@ -9,7 +9,7 @@ import {
 // Card data with images from public folder
 const CARDS = [
   {
-    image: "/f3.png", // Replace with your actual image paths
+    image: "/f3.png",
     title: "Tailored IT Solutions",
     description: "Customized services designed to meet your unique business needs."
   },
@@ -42,31 +42,23 @@ const RollingGallery = ({
 }) => {
   cards = cards.length > 0 ? cards : CARDS;
 
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState(
-    typeof window !== 'undefined' ? window.innerWidth <= 768 : false
-  );
+  // Initialize with a default value instead of null
+  const [isScreenSizeSm, setIsScreenSizeSm] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
-    const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // All hooks must be called before any conditional returns
+  const dragFactor = 0.05;
+  const rotation = useMotionValue(0);
+  const controls = useAnimation();
 
   // Calculate cylinder dimensions for seamless rotation
   const faceCount = cards.length;
-  // Reduced mobile card width and increased desktop width for better visibility
-  const faceWidth = isScreenSizeSm ? 200 : 400; // Even smaller for mobile to reduce gaps
+  const faceWidth = isScreenSizeSm ? 170 : 400;
   const cylinderWidth = faceWidth * faceCount;
   const radius = cylinderWidth / (2 * Math.PI);
 
   // Use full 360 degrees for seamless rotation
   const anglePerCard = 360 / faceCount;
-
-  const dragFactor = 0.05;
-  const rotation = useMotionValue(0);
-  const controls = useAnimation();
 
   const transform = useTransform(
     rotation,
@@ -85,13 +77,28 @@ const RollingGallery = ({
   };
 
   useEffect(() => {
-    if (autoplay) {
+    // Set client-side flag and detect screen size
+    const checkScreenSize = () => {
+      setIsScreenSizeSm(window.innerWidth <= 768);
+      setIsClient(true);
+    };
+    
+    // Set initial values
+    checkScreenSize();
+    
+    // Add resize listener
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (autoplay && isClient) {
       const currentAngle = rotation.get();
       startInfiniteSpin(currentAngle);
     } else {
       controls.stop();
     }
-  }, [autoplay]);
+  }, [autoplay, isClient]);
 
   const handleUpdate = (latest) => {
     if (typeof latest.rotateY === "number") {
@@ -126,18 +133,27 @@ const RollingGallery = ({
     }
   };
 
+  // Show loading state only after hooks are called
+  if (!isClient) {
+    return (
+      <div className="relative w-full h-[400px] flex items-center justify-center">
+        <div className="text-white">Loading...</div>
+      </div>
+    );
+  }
+
   return (
-    <div className={`relative w-full overflow-hidden ${isScreenSizeSm ? 'h-[500px]' : 'h-[750px]'}`}>
-      {/* Gradient overlays - smaller for mobile */}
+    <div className={`relative w-full overflow-hidden ${isScreenSizeSm ? 'h-[400px]' : 'h-[750px]'}`}>
+      {/* Gradient overlays */}
       <div
-        className={`absolute top-0 left-0 h-full z-10 ${isScreenSizeSm ? 'w-[40px]' : 'w-[120px]'}`}
+        className={`absolute top-0 left-0 h-full z-10 ${isScreenSizeSm ? 'w-[30px]' : 'w-[120px]'}`}
         style={{
           background:
             "linear-gradient(to left, rgba(15,23,42,0) 0%, rgba(15,23,42,0.9) 100%)",
         }}
       />
       <div
-        className={`absolute top-0 right-0 h-full z-10 ${isScreenSizeSm ? 'w-[40px]' : 'w-[120px]'}`}
+        className={`absolute top-0 right-0 h-full z-10 ${isScreenSizeSm ? 'w-[30px]' : 'w-[120px]'}`}
         style={{
           background:
             "linear-gradient(to right, rgba(15,23,42,0) 0%, rgba(15,23,42,0.9) 100%)",
@@ -160,7 +176,7 @@ const RollingGallery = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className={`flex cursor-grab items-center justify-center [transform-style:preserve-3d] ${isScreenSizeSm ? 'min-h-[480px]' : 'min-h-[730px]'}`}
+          className={`flex cursor-grab items-center justify-center [transform-style:preserve-3d] ${isScreenSizeSm ? 'min-h-[380px]' : 'min-h-[730px]'}`}
         >
           {cards.map((card, i) => (
             <div
@@ -173,47 +189,43 @@ const RollingGallery = ({
             >
               <div className={`bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-lg border border-slate-700/60 rounded-2xl flex flex-col transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-500/60 group-hover:shadow-2xl group-hover:shadow-blue-500/25 group-hover:from-slate-800/70 group-hover:to-slate-900/70 overflow-hidden ${
                 isScreenSizeSm 
-                  ? 'w-[240px] h-[320px]' 
+                  ? 'w-[200px] h-[270px]'
                   : 'w-[400px] h-[480px]'
               }`}>
-                {/* Image container - adjusted height to give more space to text */}
+                {/* Image container */}
                 <div className={`flex items-center justify-center relative overflow-hidden ${
-                  isScreenSizeSm ? 'p-4 h-[180px]' : 'p-6 h-[220px]'
+                  isScreenSizeSm ? 'p-3 h-[120px]' : 'p-6 h-[220px]'
                 }`}>
                   <div className="relative w-full h-full flex items-center justify-center">
                     <img 
                       src={card.image} 
                       alt={card.title}
                       className={`object-contain group-hover:scale-110 transition-transform duration-300 ${
-                        isScreenSizeSm ? 'max-w-[140px] max-h-[140px]' : 'max-w-[180px] max-h-[180px]'
+                        isScreenSizeSm ? 'max-w-[80px] max-h-[80px]' : 'max-w-[180px] max-h-[180px]'
                       }`}
                       onError={(e) => {
-                        // Fallback to a placeholder if image fails to load
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    {/* Fallback placeholder - hidden by default */}
                     <div className="hidden w-full h-full bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg items-center justify-center">
-                      <div className="text-slate-300 text-2xl font-bold">&lt;/&gt;</div>
+                      <div className="text-slate-300 text-xl font-bold">&lt;/&gt;</div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Text content - expanded to take more space */}
+                {/* Text content */}
                 <div className={`flex flex-col justify-center items-center text-center flex-1 ${
-                  isScreenSizeSm ? 'p-4 pb-6' : 'p-6 pb-8'
+                  isScreenSizeSm ? 'p-3 pb-4' : 'p-6 pb-8'
                 }`}>
-                  {/* Title - significantly larger on desktop */}
-                  <h3 className={`text-white font-bold mb-3 leading-tight group-hover:text-blue-100 transition-colors duration-300 ${
-                    isScreenSizeSm ? 'text-base' : 'text-3xl'
+                  <h3 className={`text-white font-bold mb-2 leading-tight group-hover:text-blue-100 transition-colors duration-300 ${
+                    isScreenSizeSm ? 'text-sm' : 'text-3xl'
                   }`}>
                     {card.title}
                   </h3>
                   
-                  {/* Description */}
                   <p className={`text-slate-300 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 ${
-                    isScreenSizeSm ? 'text-xs' : 'text-base'
+                    isScreenSizeSm ? 'text-xs leading-tight' : 'text-base'
                   }`}>
                     {card.description}
                   </p>
