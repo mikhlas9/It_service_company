@@ -189,7 +189,7 @@ const RollingGallery = ({
             >
               <div className={`bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-lg border border-slate-700/60 rounded-2xl flex flex-col transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-500/60 group-hover:shadow-2xl group-hover:shadow-blue-500/25 group-hover:from-slate-800/70 group-hover:to-slate-900/70 overflow-hidden ${
                 isScreenSizeSm 
-                  ? 'w-[200px] h-[270px]'
+                  ? 'w-[230px] h-[300px]'
                   : 'w-[400px] h-[480px]'
               }`}>
                 {/* Image container */}
@@ -201,7 +201,7 @@ const RollingGallery = ({
                       src={card.image} 
                       alt={card.title}
                       className={`object-contain group-hover:scale-110 transition-transform duration-300 ${
-                        isScreenSizeSm ? 'max-w-[80px] max-h-[80px]' : 'max-w-[180px] max-h-[180px]'
+                        isScreenSizeSm ? 'max-w-[90px] max-h-[90px]' : 'max-w-[180px] max-h-[180px]'
                       }`}
                       onError={(e) => {
                         e.target.style.display = 'none';
